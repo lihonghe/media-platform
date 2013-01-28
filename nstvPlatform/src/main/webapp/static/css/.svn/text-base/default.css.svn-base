@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft YaHei";
+}
+
+.limit {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.user-pane {
+	text-align: right;
+}
+
+.keyword-list {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	border: 1px black solid; 
+}
+
+.keyword-list tr, .keyword-list td, .keyword-list th {
+	border: 1px black solid;
+}
+
+.add-keywords label.fieldName {
+	display: inline-block;
+	width: 100px;
+}
+
+#weight {
+	width: 25px;
+}

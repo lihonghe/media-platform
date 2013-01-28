@@ -1,0 +1,50 @@
+package com.nstv.crawler.web.user;
+
+import static com.frame.util.ApplicationConfiguration.getProperty;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.nstv.crawler.entity.User;
+
+/**
+ * 关注点Controller
+ * 
+ * @author wangxiqiang
+ * @version 1.0.0
+ */
+
+@Controller
+@RequestMapping("user")
+public class UserController {
+	
+	/**
+	 * 用户登录校验
+	 * @param user
+	 * @return
+	 */
+	@RequestMapping("login")
+	public String login(Model model , User user) {
+
+		String username = getProperty("project.user_name");
+		String password = getProperty("project.password");
+
+		try {
+			if (username.equals(user.getUsername())
+					&& password.equals(user.getPassword())) {
+				user.setId(Integer.valueOf(getProperty("project.user_id")));
+				return "redirect:/keywords/query.html";
+			} else {
+				// TODO:修改返回信息
+				model.addAttribute("message", "failed");
+				return "site.user.loginPa";
+			}
+		} catch (Exception e) {
+			// TODO:修改返回信息
+			model.addAttribute("message", "failed");
+			return "site.user.loginPa";
+		}
+
+	}
+}

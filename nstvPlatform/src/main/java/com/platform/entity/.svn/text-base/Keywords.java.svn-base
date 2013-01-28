@@ -1,0 +1,126 @@
+/* @(#) Keywords.java
+ * Project:	nstvCenter
+ * Package: com.nstv.crawler.entity
+ * Author:	LuoChuan
+ * Date:	Dec 27, 2012
+ * Copyright © 2010-2012 by Beijing Novel-SuperTV Digital TV Technology Co., Ltd. All rights reserved.
+ */
+package com.nstv.crawler.entity;
+
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * 关注点实体类
+ * @author luochuan
+ * @version 1.0.0
+ */
+public class Keywords {
+
+	/** 关注点自增ID. */
+	private int id;
+
+	/** 关注点内容 */
+	private String text;
+
+	/** 关注点所属用户ID. */
+	private int userId;
+
+	/** 关注点所属网站. 以换行分割. */
+	private String website;
+
+	/** 权重. */
+	private int weight;
+	
+	/** 分配给哪些分中心. */
+	private String subcenterId;
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the text
+	 */
+	public String getText() {
+		return text;
+	}
+
+	/**
+	 * @param text
+	 *            the text to set
+	 */
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	/**
+	 * @return the userId
+	 */
+	public int getUserId() {
+		return userId;
+	}
+
+	/**
+	 * @param userId
+	 *            the userId to set
+	 */
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	/**
+	 * @return the website
+	 */
+	public List<String> getWebsite() {
+		return Arrays.asList(website.split("\n"));
+	}
+
+	/**
+	 * @param website
+	 *            the website to set
+	 */
+	public void setWebsite(String website) {
+		this.website = website;
+	}
+
+	/**
+	 * @return the weight
+	 */
+	public int getWeight() {
+		return weight;
+	}
+
+	/**
+	 * @param weight
+	 *            the weight to set
+	 */
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	/**
+	 * @return the subcenterId
+	 */
+	public List<String> getSubcenterId() {
+		return Arrays.asList(subcenterId.split("\n"));
+	}
+
+	/**
+	 * @param subcenterId the subcenterId to set
+	 */
+	public void setSubcenterId(String subcenterId) {
+		this.subcenterId = subcenterId;
+	}
+}

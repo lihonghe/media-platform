@@ -1,0 +1,44 @@
+package com.nstv.crawler.service;
+
+import java.util.List;
+
+import com.nstv.crawler.dto.KeywordsDto;
+
+
+/**
+ * 关注点业务逻辑接口
+ * 
+ * @author wangxiqiang
+ * @version 1.0.0
+ */
+public interface KeywordsService {
+
+	/**
+	 * 添加关注点
+	 * 
+	 * @param keywords
+	 *            要添加的关注点
+	 * @return 是否添加成功
+	 */
+	public String add(KeywordsDto keywordDto);
+	
+	/**
+	 * 删除关注点
+	 * 
+	 * @param keywordsId
+	 *            要删除的关注点ID
+	 * @return 是否删除成功
+	 */
+	public String delete(Integer keywordsId);
+
+	/**
+	 * 根据用户ID查询关注点列表
+	 * 
+	 * @param userId
+	 *            用户ID
+	 * @return 关注点列表
+	 */
+	public List<KeywordsDto> query(Integer userId);
+	
+	
+}

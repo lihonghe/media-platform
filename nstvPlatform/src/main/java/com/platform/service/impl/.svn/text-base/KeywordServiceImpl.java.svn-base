@@ -1,0 +1,48 @@
+package com.nstv.crawler.service.impl;
+
+import static com.frame.util.ApplicationConfiguration.getProperty;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.nstv.crawler.dto.KeywordsDto;
+import com.nstv.crawler.json.KeywordsResponse;
+import com.nstv.crawler.service.KeywordsService;
+import com.nstv.crawler.util.http.HttpSender;
+import com.nstv.crawler.util.json.JsonConverter;
+
+@Service
+public class KeywordServiceImpl implements KeywordsService {
+
+	@Resource
+	public HttpSender httpClientSender;
+
+	@Override
+	public String add(KeywordsDto keywordsDto) {
+		return httpClientSender.send(
+				getProperty("project.nstvCenter.addKeyWords"),
+				HttpSender.HTTP_POST, JsonConverter.objectToJson(keywordsDto));
+	}
+
+	@Override
+	public String delete(Integer keywordsId) {
+		return httpClientSender.send(
+				getProperty("project.nstvCenter.deleteKeyWords"),
+				HttpSender.HTTP_POST, JsonConverter.objectToJson(keywordsId));
+	}
+
+	@Override
+	public List<KeywordsDto> query(Integer userId) {
+		String json = httpClientSender.send(
+				getProperty("project.nstvCenter.queryKeyWords"),
+				HttpSender.HTTP_POST, JsonConverter.objectToJson(userId));
+		
+		KeywordsResponse response = JsonConverter.jsonToObject(json, KeywordsResponse.class);
+		
+		
+		return response.getKeywords();
+	}
+}

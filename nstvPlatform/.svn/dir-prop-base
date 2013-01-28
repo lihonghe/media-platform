@@ -1,0 +1,9 @@
+K 10
+svn:ignore
+V 35
+.settings
+logs
+.classpath
+.project
+
+END

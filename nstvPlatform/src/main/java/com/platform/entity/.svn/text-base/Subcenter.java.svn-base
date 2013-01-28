@@ -1,0 +1,91 @@
+/* @(#) Subcenter.java
+ * Project:	nstvCenter
+ * Package: com.nstv.crawler.entity
+ * Author:	LuoChuan
+ * Date:	Dec 27, 2012
+ * Copyright © 2010-2012 by Beijing Novel-SuperTV Digital TV Technology Co., Ltd. All rights reserved.
+ */
+package com.nstv.crawler.entity;
+
+
+/**
+ * 业务分中心实体类
+ * 
+ * @author luochuan
+ * @version 1.0.0
+ */
+public class Subcenter {
+
+	/** 分中心自增ID。UUID索引效率低，使用ID作为主键提高索引效率。 */
+	private int id;
+
+	/** 通用唯一识别码，用于确保分中心唯一性。 */
+	private String uuid;
+
+	/** 分中心IP地址。 */
+	private String address;
+
+	/** 分中心平台信息。 */
+	private String environment;
+
+	/**
+	 * @return the id
+	 */
+	public int getId() {
+		return id;
+	}
+
+	/**
+	 * @param id
+	 *            the id to set
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the uuid
+	 */
+	public String getUuid() {
+		return uuid;
+	}
+
+	/**
+	 * @param uuid
+	 *            the uuid to set
+	 */
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
+
+	/**
+	 * @return the address
+	 */
+	public String getAddress() {
+		return address;
+	}
+
+	/**
+	 * @param address
+	 *            the address to set
+	 */
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	/**
+	 * @return the environment
+	 */
+	public String getEnvironment() {
+		return environment;
+	}
+
+	/**
+	 * @param environment
+	 *            the environment to set
+	 */
+	public void setEnvironment(String environment) {
+		this.environment = environment;
+	}
+
+}

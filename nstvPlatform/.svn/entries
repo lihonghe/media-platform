@@ -1,0 +1,51 @@
+10
+
+dir
+567
+svn+ssh://svn@dev.nstv.in/crawler/06.CrawlerProject/nstvPlatform
+svn+ssh://svn@dev.nstv.in/crawler
+
+
+
+2013-01-21T08:36:04.439947Z
+545
+luochuan
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+647e905f-feee-4ba6-979d-0f7362184b8b
+
+pom.xml
+file
+
+
+
+
+
+2e3d9abdb29eaa22f83b9cd60dfbaed5
+2013-01-18T08:46:38.108655Z
+539
+luochuan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+pom.xml.r533
+pom.xml.r541
+pom.xml.mine
+
+src
+dir
+

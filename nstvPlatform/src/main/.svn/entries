@@ -1,0 +1,37 @@
+10
+
+dir
+567
+svn+ssh://svn@dev.nstv.in/crawler/06.CrawlerProject/nstvPlatform/src/main
+svn+ssh://svn@dev.nstv.in/crawler
+
+
+
+2013-01-21T08:36:04.439947Z
+545
+luochuan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+647e905f-feee-4ba6-979d-0f7362184b8b
+
+java
+dir
+
+resources
+dir
+
+webapp
+dir
+

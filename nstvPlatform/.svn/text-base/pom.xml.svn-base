@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.nstv.crawler</groupId>
+	<artifactId>nstvPlatform</artifactId>
+	<packaging>war</packaging>
+	<version>1.0.3-SNAPSHOT</version>
+	<name>nstvPlatform Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<java-version>1.6</java-version>
+		<tiles-version>2.2.2</tiles-version>
+		<util-version>1.0.2-SNAPSHOT</util-version>
+		<webcommon-version>1.0.2-SNAPSHOT</webcommon-version>
+		<business-version>1.0.2-SNAPSHOT</business-version>
+	</properties>
+	<dependencies>
+
+		<!-- Freemarker and Tiles -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.19</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-api</artifactId>
+			<version>${tiles-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-core</artifactId>
+			<version>${tiles-version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>jcl-over-slf4j</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-jsp</artifactId>
+			<version>${tiles-version}</version>
+		</dependency>
+
+		<!-- Internal project dependencies. -->
+		<dependency>
+			<groupId>com.nstv.crawler</groupId>
+			<artifactId>nstvUtil</artifactId>
+			<version>${util-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.nstv.crawler</groupId>
+			<artifactId>nstvWebCommon</artifactId>
+			<version>${webcommon-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.nstv.crawler</groupId>
+			<artifactId>nstvBusiness</artifactId>
+			<version>${business-version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>nstvPlatform</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java-version}</source>
+					<target>${java-version}</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
